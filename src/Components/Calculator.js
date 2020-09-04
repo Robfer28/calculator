@@ -1,6 +1,6 @@
 import React from "react";
 
-function Calculator() {
+export function Calculator() {
   return (
     <div>
       <button>+</button>
