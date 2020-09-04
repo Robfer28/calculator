@@ -1,25 +1,26 @@
 import React from "react";
+import "./Calculator.css";
 
-export function Calculator() {
+function Calculator() {
   return (
-    <div>
-      <button>+</button>
-      <button>-</button>
-      <button>x</button>
-      <button>÷</button>
-      <button>9</button>
-      <button>8</button>
-      <button>7</button>
-      <button>6</button>
-      <button>5</button>
-      <button>4</button>
-      <button>3</button>
-      <button>2</button>
-      <button>1</button>
-      <button>0</button>
-      <button>.</button>
-      <button>AC</button>
-      <button>=</button>
+    <div className="Calculator">
+      <button className="Keypad">+</button>
+      <button className="Keypad">-</button>
+      <button className="Keypad">x</button>
+      <button className="Keypad">÷</button>
+      <button className="Keypad">9</button>
+      <button className="Keypad">8</button>
+      <button className="Keypad">7</button>
+      <button className="Keypad">6</button>
+      <button className="Keypad">5</button>
+      <button className="Keypad">4</button>
+      <button className="Keypad">3</button>
+      <button className="Keypad">2</button>
+      <button className="Keypad">1</button>
+      <button className="Keypad">0</button>
+      <button className="Keypad">.</button>
+      <button className="Keypad AC">AC</button>
+      <button className="Keypad Equals">=</button>
     </div>
   );
 }
