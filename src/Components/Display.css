@@ -1,0 +1,14 @@
+.Display {
+  width: 20rem;
+  background-color: #393939;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 5rem auto 0 auto;
+}
+
+.Display-Text {
+  text-align: end;
+  font-size: 2.5rem;
+}

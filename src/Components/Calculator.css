@@ -23,6 +23,14 @@
   outline: none;
 }
 
+.AC {
+  background: #c04444;
+}
+.AC:hover,
+.AC:active {
+  background: #af3b3b;
+}
+
 .Equals {
   grid-column: 4/5;
   grid-row: 2/6;
@@ -31,11 +39,4 @@
 }
 .Equals:hover {
   background: #37a6de;
-}
-.AC {
-  background: #c04444;
-}
-.AC:hover,
-.AC:active {
-  background: #af3b3b;
 }
