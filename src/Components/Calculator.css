@@ -8,27 +8,27 @@
   font-size: 1rem;
 }
 
-.Keypad {
+.Key {
   background-color: #ffffff;
   border: 1px solid #000000;
   font-size: inherit;
 }
 
-.Keypad:hover,
-.Keypad:active {
+.Key:hover,
+.Key:active {
   background-color: #adadad;
 }
 
-.Keypad:focus {
+.Key:focus {
   outline: none;
 }
 
 .AC {
-  background: #c04444;
+  background: #c42f2f;
 }
 .AC:hover,
 .AC:active {
-  background: #af3b3b;
+  background: #f16e6e;
 }
 
 .Equals {
