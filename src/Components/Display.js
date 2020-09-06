@@ -4,7 +4,7 @@ import "./Display.css";
 function Display({ operation }) {
   return (
     <div className="Display">
-      <div className="Display-Text">{operation}</div>
+      <h2 className="Display-Text">{operation}</h2>
     </div>
   );
 }
