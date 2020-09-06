@@ -26,10 +26,10 @@ function CalculatorKeys(usage) {
       </button>
       <button
         className="Key"
-        name="÷"
+        name="/"
         onClick={(e) => usage.onClick(e.target.name)}
       >
-        ÷
+        /
       </button>
       <button
         className="Key"
@@ -90,7 +90,7 @@ function CalculatorKeys(usage) {
       <button
         className="Key"
         name="1"
-        oonClick={(e) => usage.onClick(e.target.name)}
+        onClick={(e) => usage.onClick(e.target.name)}
       >
         1
       </button>

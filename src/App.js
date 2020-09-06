@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <Calculator initianValue={0} />
+      <Calculator initialValue={0} />
     </div>
   );
 }
