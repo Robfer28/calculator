@@ -42,8 +42,8 @@ function Calculator({ initialValue }) {
           setStoredNumber(
             `${
               Math.round(
-                `${(parseFloat(storedNumber) + parseFloat(operation)) * 100}`
-              ) / 100
+                `${(parseFloat(storedNumber) + parseFloat(operation)) * 1000}`
+              ) / 1000
             }`
           );
           break;
@@ -51,7 +51,7 @@ function Calculator({ initialValue }) {
           setStoredNumber(
             `${
               Math.round(
-                `${(parseFloat(storedNumber) - parseFloat(operation)) * 100}`
+                `${(parseFloat(storedNumber) - parseFloat(operation)) * 1000}`
               ) / 100
             }`
           );
@@ -60,8 +60,8 @@ function Calculator({ initialValue }) {
           setStoredNumber(
             `${
               Math.round(
-                `${(parseFloat(storedNumber) / parseFloat(operation)) * 100}`
-              ) / 100
+                `${(parseFloat(storedNumber) / parseFloat(operation)) * 1000}`
+              ) / 1000
             }`
           );
           break;
@@ -69,8 +69,8 @@ function Calculator({ initialValue }) {
           setStoredNumber(
             `${
               Math.round(
-                `${parseFloat(storedNumber) * parseFloat(operation) * 100}`
-              ) / 100
+                `${parseFloat(storedNumber) * parseFloat(operation) * 1000}`
+              ) / 1000
             }`
           );
           break;
