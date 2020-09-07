@@ -28,16 +28,11 @@ function Calculator({ initialValue }) {
     }
   };
 
-  //function handler
+  //stores the operator to functionType
   const SetCalcFunct = (type) => {
-    if (operation) {
-      setFunctionType(type);
-      setStoredNumber(operation);
-      setOperation("");
-    }
-    if (storedNumber) {
-      setFunctionType(type);
-    }
+    setFunctionType(type);
+    setStoredNumber(operation);
+    setOperation("");
   };
 
   //math operations
