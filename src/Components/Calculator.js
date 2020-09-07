@@ -24,9 +24,14 @@ function Calculator({ initialValue }) {
 
   //stores the operator to functionType
   const SetCalcFunct = (type) => {
-    setFunctionType(type);
-    setStoredNumber(operation);
-    setOperation("");
+    if (operation) {
+      setFunctionType(type);
+      setStoredNumber(operation);
+      setOperation("");
+    }
+    if (storedNumber) {
+      setFunctionType(type);
+    }
   };
 
   //math operations
