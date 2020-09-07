@@ -2,14 +2,28 @@ import React, { useState } from "react";
 import CalculatorKeys from "./CalculatorKeys";
 import Display from "./Display";
 import "./Calculator.css";
-//falta poner resultado en display y numeros decimales
+
 function Calculator({ initialValue }) {
   const [operation, setOperation] = useState(initialValue);
   const [storedNumber, setStoredNumber] = useState("");
   const [functionType, setFunctionType] = useState("");
 
-  const DisplayValue = (num) => {
-    setOperation(`${(operation + num).replace(/^0+/, "")}`);
+  const DisplayValue = (button) => {
+    if (storedNumber.length) {
+      setOperation(storedNumber);
+    }
+    setOperation(
+      `${(operation === "0" ? button : operation + button).replace(/^0+/, "")}`
+    );
+  };
+
+  const Decimal = (button) => {
+    if (operation !== button) {
+      setOperation(operation + button);
+    }
+    if (storedNumber.length) {
+      setOperation("0.");
+    }
   };
 
   const SetCalcFunct = (type) => {
@@ -63,6 +77,8 @@ function Calculator({ initialValue }) {
       SetCalcFunct(button);
     } else if (button === "AC") {
       reset();
+    } else if (button === ".") {
+      Decimal(button);
     } else {
       DisplayValue(button);
     }
@@ -76,7 +92,11 @@ function Calculator({ initialValue }) {
 
   return (
     <div>
-      <Display operation={operation} />
+      <Display
+        operation={
+          !operation.length && !storedNumber ? 0 : operation || storedNumber
+        }
+      />
       <CalculatorKeys onClick={buttonPress} />
     </div>
   );
