@@ -43,13 +43,31 @@ function Calculator({ initialValue }) {
           );
           break;
         case "-":
-          setStoredNumber(storedNumber - operation);
+          setStoredNumber(
+            `${
+              Math.round(
+                `${(parseFloat(storedNumber) - parseFloat(operation)) * 100}`
+              ) / 100
+            }`
+          );
           break;
         case "/":
-          setStoredNumber(storedNumber / operation);
+          setStoredNumber(
+            `${
+              Math.round(
+                `${(parseFloat(storedNumber) / parseFloat(operation)) * 100}`
+              ) / 100
+            }`
+          );
           break;
         case "x":
-          setStoredNumber(storedNumber * operation);
+          setStoredNumber(
+            `${
+              Math.round(
+                `${parseFloat(storedNumber) * parseFloat(operation) * 100}`
+              ) / 100
+            }`
+          );
           break;
         default:
           break;
