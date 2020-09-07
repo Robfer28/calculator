@@ -10,9 +10,6 @@ function Calculator({ initialValue }) {
 
   //displays numbers to the screen
   const DisplayValue = (button) => {
-    if (storedNumber.length) {
-      setOperation(storedNumber);
-    }
     setOperation(
       `${(operation === "0" ? button : operation + button).replace(/^0+/, "")}`
     );
@@ -22,9 +19,6 @@ function Calculator({ initialValue }) {
   const Decimal = (button) => {
     if (operation !== button) {
       setOperation(operation + button);
-    }
-    if (storedNumber.length) {
-      setOperation("0.");
     }
   };
 
