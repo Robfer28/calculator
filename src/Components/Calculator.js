@@ -8,6 +8,7 @@ function Calculator({ initialValue }) {
   const [storedNumber, setStoredNumber] = useState("");
   const [functionType, setFunctionType] = useState("");
 
+  //displays numbers to the screen
   const DisplayValue = (button) => {
     if (storedNumber.length) {
       setOperation(storedNumber);
@@ -17,6 +18,7 @@ function Calculator({ initialValue }) {
     );
   };
 
+  //adds decimal dot
   const Decimal = (button) => {
     if (operation !== button) {
       setOperation(operation + button);
@@ -26,6 +28,7 @@ function Calculator({ initialValue }) {
     }
   };
 
+  //function handler
   const SetCalcFunct = (type) => {
     if (operation) {
       setFunctionType(type);
@@ -37,6 +40,7 @@ function Calculator({ initialValue }) {
     }
   };
 
+  //math operations
   const calculate = () => {
     if (operation && storedNumber) {
       switch (functionType) {
@@ -65,6 +69,7 @@ function Calculator({ initialValue }) {
     }
   };
 
+  //button handler, derives to functions
   const buttonPress = (button) => {
     if (button === "=") {
       calculate();
@@ -84,6 +89,7 @@ function Calculator({ initialValue }) {
     }
   };
 
+  // resets display and operation state
   const reset = () => {
     setOperation(0);
     setStoredNumber("");
